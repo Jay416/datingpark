@@ -1,0 +1,121 @@
+ @font-face {
+    font-family: Gabriola; /* Имя шрифта */
+    src: url(/fonts/Gabriola.ttf); /* Путь к файлу со шрифтом */
+   }
+html{
+	font-family: "Gabriola" ;
+	margin:0;
+	padding: 0;
+	height: 100%;
+}
+body{
+	margin:0;
+	padding: 0;
+	height: 100%;
+}
+.container{
+	height: 100%;
+	background: url("/images/фон.png");
+}
+.telefone{
+	width: 830px;
+	height: 50px;
+	margin: 0 auto;
+	margin-bottom: 30px;
+}
+.contact{
+	width: 130px;
+	height: 50px;
+	float:left;
+	font-size: 22px;
+	line-height: 50px;
+}
+.what{
+	float:left;
+	cursor: pointer;
+}
+.contact_text{
+	float:right;
+}
+.call{
+	width: 245px;
+	height: 50px;
+	float:right;
+	font-size: 22px;
+	line-height: 50px;
+}
+.call_me{
+	float:right;
+	cursor: pointer;
+}
+.call_text{
+	float:left;
+}
+.menu{
+	width: 830px;
+	height: 70px;
+	background: url("/images/меню.png") no-repeat;
+	margin:0 auto;
+	line-height: 67px;
+}
+.right_menu{
+	font-size: 20px;
+	color: #8BDBA7;
+	float:left;
+}
+.left_menu{
+	font-size: 20px;
+	color: #8BDBA7;
+	float:right;
+}
+.about{
+	margin-left:60px;
+	cursor: pointer;
+}
+.media{
+	margin-right: 60px;
+	cursor: pointer;
+}
+.logotip{
+	position: absolute;
+	margin-left: 300px;
+	margin-top: -65px;
+}
+.content{
+	margin: 0 auto;
+}
+
+
+ /*Заглушка*/
+.container{
+	overflow: hidden;
+	font-size: 0;
+	text-align: center;
+}
+.container:before{
+	content: '';
+	display: inline-block;
+	vertical-align: middle;
+	height: 100%;
+}
+.coming-content{
+	width: 700px;
+	margin: 0 auto;
+	text-align: center;
+	font-size: 65px;
+	color:#206150;
+	display: inline-block;
+	vertical-align: middle;
+	max-height: inherit;
+	max-width: 100%;
+}
+.coming-soon{
+	position: absolute;
+	margin-left: 20px;
+}
+.logo-fone{
+	position: relative;
+	height: 500px;
+	background: url("/images/coming-logo.png") no-repeat;
+	margin-top: 30px;
+}
