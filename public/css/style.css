@@ -8,20 +8,25 @@ html{
 	padding: 0;
 	height: 100%;
 }
+a, a:link, a:visited, a:active{
+	text-decoration: none;
+}
 body{
 	margin:0;
 	padding: 0;
-	height: 100%;
+	overflow: auto;
+	background: url("/images/fon.png");
 }
 .container{
-	height: 100%;
-	background: url("/images/bg.png");
+	min-width: 960px;
+	min-height: 100%;
+	overflow: hidden;
 }
 .telefone{
-	width: 830px;
+	width: 845px;
 	height: 50px;
 	margin: 0 auto;
-	margin-bottom: 30px;
+	margin-bottom: 45px;
 }
 .contact{
 	width: 130px;
@@ -29,6 +34,38 @@ body{
 	float:left;
 	font-size: 22px;
 	line-height: 50px;
+}
+
+.page_block{
+	position: relative;
+}
+.page_cont{
+	display: none;
+}
+.page_cont.active{
+	display: block;
+}
+.page_wrap{
+	height: 100%;
+}
+.page_wrap:before{
+	content: '';
+	display: inline-block;
+	vertical-align: middle;
+	height: 100%;
+}
+.page{
+	width: 90%;
+	display: none;
+	vertical-align: middle;
+	-webkit-transition: opacity 2s;
+	-moz-transition: opacity 2s;
+	-ms-transition: opacity 2s;
+	-o-transition: opacity 2s;
+	transition: opacity 2s;
+}
+.page.active{
+	display: inline-block;
 }
 .what{
 	float:left;
@@ -52,19 +89,19 @@ body{
 	float:left;
 }
 .menu{
-	width: 830px;
+	width: 850px;
 	height: 70px;
-	background: url("/images/меню.png") no-repeat;
+	background: url("/images/menu.png") no-repeat;
 	margin:0 auto;
-	line-height: 67px;
+	line-height: 61px;
 }
 .right_menu{
-	font-size: 20px;
+	font-size: 22px;
 	color: #8BDBA7;
 	float:left;
 }
 .left_menu{
-	font-size: 20px;
+	font-size: 22px;
 	color: #8BDBA7;
 	float:right;
 }
@@ -73,41 +110,346 @@ body{
 	cursor: pointer;
 }
 .media{
-	margin-right: 60px;
+	margin-right: 70px;
 	cursor: pointer;
 }
 .logotip{
 	position: absolute;
-	margin-left: 300px;
-	margin-top: -65px;
+	display: block;
+	margin-left: 310px;
+	margin-top: -68px;
+}
+.menu-container{
+	margin-bottom: 65px;
 }
 .content{
 	margin: 0 auto;
+	width: 850px;
 }
-
-
- /*Заглушка*/
-.container{
+.home_items{
 	overflow: hidden;
-	font-size: 0;
-	text-align: center;
 }
-.container:before{
+.home_item{
+	width: 270px;
+	height: 320px;
+	background: url("/images/block.png") no-repeat;
+	float: left;
+	position: relative;
+	margin-right: 18px;
+}
+.home_item:last-child{
+	margin-right: 0;
+}
+.one{
+	margin-top: 8px;
+	margin-left: 10px;
+}
+.text-one{
+	font-size: 28px;
+	text-align: center;
+	margin-top: -13px;
+}
+.to-page{
+	width: 200px;
+	font-size: 20px;
+	line-height: 20px;
+	text-align: center;
+	padding-left: 35px;
+}
+.arrow{
+	width: 28px;
+	height: 27px;
+	background: url("/images/arrow.png");
+	position: absolute;
+	bottom: 0px;
+	right: 0;
+	margin: 10px 15px 15px 10px;
+	cursor: pointer;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+}
+
+.arrow:hover{
+	-webkit-box-shadow: inset 3px 5px 1px #075E2D;
+	-moz-box-shadow: 	inset 3px 5px 1px #075E2D;
+	box-shadow: 		inset 3px 5px 1px #075E2D;
+}
+.back{
+	position: absolute;
+	right: 42px;
+	top: 5px;
+	background: #4c7e60;
+	border-radius: 5px;
+	padding: 0 10px;
+	color: #8BDBA7
+}
+.back:hover{
+	-webkit-box-shadow: inset 3px 5px 1px #075E2D;
+	-moz-box-shadow: 	inset 3px 5px 1px #075E2D;
+	box-shadow: 		inset 3px 5px 1px #075E2D;
+}
+.invite-btn{
+	width: 163px;
+	height:48px;
+	margin: 0 auto;
+	background: url("/images/invite.png");
+	font-size: 27px;
+	text-align: center;
+	line-height: 45px;
+	margin-top: 50px;
+	cursor: pointer;
+}
+.container-social{
+	margin: 0px auto;
+	width: 845px;
+	text-align: center;
+	margin-top: 50px;
+}
+.social{
+	display: inline-block;
+	padding-right: 10px;
+}
+.partners_one{
+	display: inline-block;
+}
+.partners_two{
+	display: inline-block;
+	margin: -11px;
+}
+
+.social_group{
+	display: inline-block;
+}
+.partners-group{
+	width: 845px;
+	margin: 0 auto;
+	text-align:center;
+}
+.nope{
+	display: none;
+}
+/*Что такое Speed Dating?*/
+
+.history-cont{
+	width: 777px;
+	height: 455px;
+	border-radius: 12px;
+	background: url("/images/uzor1.png") no-repeat right top,
+				url("/images/uzor2.png") no-repeat left bottom, 
+				url("/images/gradient.png") repeat-x;
+	box-shadow: 0 0 15px rgba(0,0,0,0.7);
+	font-size: 20px;
+	text-align: center;
+	line-height: 25px;
+	margin: 0 auto;
+}
+.history-text{
+	width: 700px;
+	margin: 0 auto;
+	padding-top: 32px;
+}
+.page_arrow{
+	width: 40px;
+	height: 40px;
+	margin-top: -20px;
+	position: absolute;
+	top:50%;
+}
+.to-left{
+	left: -40px;
+}
+.to-right{
+	right: -40px;
+}
+
+/*Как это работает и О нас*/
+.about-cont{
+	width: 777px;
+	height: 455px;
+	border-radius: 12px;
+	background: url("/images/uzor3.png") no-repeat right top,
+				url("/images/uzor4.png") no-repeat left bottom, 
+				url("/images/gradient.png") repeat-x;
+	box-shadow: 0 0 15px rgba(0,0,0,0.7);
+	font-size: 21px;
+	text-align: center;
+	line-height: 25px;
+	margin: 0 auto;
+}
+.about-text{
+	width: 700px;
+	margin: 0 auto;
+	padding-top: 28px;
+}
+ol{
+	text-align: left;
+}
+/*Советы и рекоммендации*/
+.cont-advice{
+	width: 777px;
+	height: 455px;
+	border-radius: 12px;
+	background: url("/images/uzor5.png") no-repeat right top,
+				url("/images/uzor6.png") no-repeat left bottom, 
+				url("/images/gradient.png") repeat-x;
+	box-shadow: 0 0 15px rgba(0,0,0,0.7);
+	font-size: 21px;
+	text-align: center;
+	line-height: 25px;
+	margin: 0 auto;
+}
+.text-advice{
+	width: 700px;
+	margin: 0 auto;
+	padding-top: 28px;
+}
+
+/*Контакты*/
+.container-two{
+	overflow: hidden;
+	text-align: center;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.6);
+	opacity:0;
+}
+.container-two:before{
 	content: '';
 	display: inline-block;
 	vertical-align: middle;
 	height: 100%;
 }
+.contact-container{
+	width: 450px;
+	height: 360px;
+	background: url("/images/contact.png");
+	position: relative;
+	text-align: center;
+	line-height: 25px;	
+	display: inline-block;
+	vertical-align: middle;
+}
+.close{
+	width: 30px;
+	height: 35px;
+	position: absolute;
+	background: url("/images/close.png");
+	right: 0;
+	margin: 4px;
+	margin-top: -1px;
+	cursor: pointer;
+}
+
+.text-contact{
+	width: 360px;
+	margin: 0 auto;
+	padding-top: 20px;
+	font-size: 25px;
+}
+.contacts{
+	color:#ffffff;
+	font-size: 30px;
+	margin:0 auto;
+	text-align: center;
+	width: 360px;
+	padding-top: 10px;
+}
+.my-social{
+	width: 165px;
+	margin-top: 15px;
+	margin: 0 auto;
+}
+.group{
+	display: block;
+	background: url("/images/vk.png") no-repeat;
+	width: 27px;
+	height: 30px;
+	float:left;
+	margin-left: 20px;
+	margin-top: 15px;
+	cursor: pointer;
+}
+.odnok{
+	background: url("/images/odnoklas.png") no-repeat;
+}
+.face{
+	background: url("/images/face.png") no-repeat;
+}
+
+/*Заказ обратного звонка*/
+.container-one {
+	overflow: hidden;
+	text-align: center;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.6);
+	opacity:0;
+}
+.container-one:before{
+	content: '';
+	display: inline-block;
+	vertical-align: middle;
+	height: 100%;
+}
+.hide{
+	display: none;
+}
+.call-container{
+	width: 450px;
+	height: 360px;
+	background: url("/images/call.png");
+	position: relative;
+	text-align: center;
+	line-height: 25px;	
+	display: inline-block;
+	vertical-align: middle;
+}
+.form-container{
+	width: 320px;
+	margin: 0 auto;
+	font-size: 22px;
+	text-align: center;
+}
+.form-name{
+	padding-top: 13px;
+}
+input{
+	width: 300px;
+	height: 25px;
+	border-radius: 10px;
+	border: none;
+	margin-top: 5px;
+	text-align: center;
+	outline: none;
+}
+.button{
+	width: 150px;
+	height: 30px;
+	border:1px solid #000000;
+	border-radius: 10px;
+	margin: auto;
+	margin-top: 20px;
+	background-color: #fff;
+	line-height: 29px;
+	cursor: pointer;
+}
+
+
+ /*Заглушка*/
 .coming-content{
 	width: 700px;
 	margin: 0 auto;
 	text-align: center;
 	font-size: 65px;
 	color:#206150;
-	display: inline-block;
-	vertical-align: middle;
-	max-height: inherit;
-	max-width: 100%;
+	padding-top:150px;
+	display: none;
+
 }
 .coming-soon{
 	position: absolute;
@@ -119,3 +461,8 @@ body{
 	background: url("/images/coming-logo.png") no-repeat;
 	margin-top: 30px;
 }
+
+
+
+
+
