@@ -71,12 +71,18 @@ body{
 	float:left;
 	cursor: pointer;
 }
+.what:hover{
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius:10px;
+	-webkit-box-shadow:  0px 0px 15px #fff;
+	-moz-box-shadow: 	 0px 0px 15px #fff;
+	box-shadow: 		 0px 0px 15px #fff;
+}
 .contact_text{
 	float:right;
 }
 .call{
 	width: 245px;
-	height: 50px;
 	float:right;
 	font-size: 22px;
 	line-height: 50px;
@@ -84,6 +90,13 @@ body{
 .call_me{
 	float:right;
 	cursor: pointer;
+}
+.call_me:hover{
+	-webkit-box-shadow:  0px 0px 15px #fff;
+	-moz-box-shadow: 	 0px 0px 15px #fff;
+	box-shadow: 		 0px 0px 15px #fff;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius:10px;
 }
 .call_text{
 	float:left;
@@ -109,9 +122,15 @@ body{
 	margin-left:60px;
 	cursor: pointer;
 }
+.about:hover{
+	color:#f2bca4;
+}
 .media{
 	margin-right: 70px;
 	cursor: pointer;
+}
+.media:hover{
+	color:#f2bca4;
 }
 .logotip{
 	position: absolute;
@@ -171,9 +190,9 @@ body{
 }
 
 .arrow:hover{
-	-webkit-box-shadow: inset 3px 5px 1px #075E2D;
-	-moz-box-shadow: 	inset 3px 5px 1px #075E2D;
-	box-shadow: 		inset 3px 5px 1px #075E2D;
+	-webkit-box-shadow:  0px 0px 7px #3a6149;
+	-moz-box-shadow: 	 0px 0px 7px #3a6149;
+	box-shadow: 		 0px 0px 7px #3a6149;
 }
 .back{
 	position: absolute;
@@ -185,20 +204,33 @@ body{
 	color: #8BDBA7
 }
 .back:hover{
-	-webkit-box-shadow: inset 3px 5px 1px #075E2D;
-	-moz-box-shadow: 	inset 3px 5px 1px #075E2D;
-	box-shadow: 		inset 3px 5px 1px #075E2D;
+	color:#fff;
+	-webkit-box-shadow:  0px 0px 7px #3a6149;
+	-moz-box-shadow: 	 0px 0px 7px #3a6149;
+	box-shadow: 		 0px 0px 7px #3a6149;
 }
 .invite-btn{
 	width: 163px;
-	height:48px;
+	height:41px;
 	margin: 0 auto;
-	background: url("/images/invite.png");
-	font-size: 27px;
+	background:#DBB99F;
+	border-radius: 10px;
+	font-size: 22px;
 	text-align: center;
-	line-height: 45px;
+	line-height: 40px;
 	margin-top: 50px;
 	cursor: pointer;
+	-webkit-box-shadow:  0px 0px 7px #3a6149;
+	-moz-box-shadow: 	 0px 0px 7px #3a6149;
+	box-shadow: 		 0px 0px 7px #3a6149;
+}
+.invite-btn:hover{
+	font-size:25px;
+	line-height: 38px;
+	background:#F3BCA4;
+	-webkit-box-shadow:  0px 0px 15px #004010;
+	-moz-box-shadow: 	 0px 0px 15px #004010;
+	box-shadow: 		 0px 0px 15px #004010;
 }
 .container-social{
 	margin: 0px auto;
@@ -208,7 +240,7 @@ body{
 }
 .social{
 	display: inline-block;
-	padding-right: 10px;
+	padding: 0 6px;
 }
 .partners_one{
 	display: inline-block;
@@ -255,6 +287,7 @@ body{
 	margin-top: -20px;
 	position: absolute;
 	top:50%;
+	cursor: pointer;
 }
 .to-left{
 	left: -40px;
@@ -285,6 +318,7 @@ body{
 ol{
 	text-align: left;
 }
+
 /*Советы и рекоммендации*/
 .cont-advice{
 	width: 777px;
@@ -365,12 +399,15 @@ ol{
 .group{
 	display: block;
 	background: url("/images/vk.png") no-repeat;
-	width: 27px;
-	height: 30px;
+	width: 21px;
+	height: 21px;
 	float:left;
 	margin-left: 20px;
 	margin-top: 15px;
 	cursor: pointer;
+}
+.group:hover{
+	box-shadow: 0 0 15px #ffffff;
 }
 .odnok{
 	background: url("/images/odnoklas.png") no-repeat;
@@ -378,9 +415,14 @@ ol{
 .face{
 	background: url("/images/face.png") no-repeat;
 }
-
+input:hover{
+	-webkit-box-shadow:  0px 0px 15px #747776;
+	-moz-box-shadow: 	 0px 0px 15px #747776;
+	box-shadow: 		 0px 0px 15px #747776;
+}
 /*Заказ обратного звонка*/
-.container-one {
+.container-one,
+.container-three{
 	overflow: hidden;
 	text-align: center;
 	position: absolute;
@@ -390,7 +432,8 @@ ol{
 	background: rgba(0, 0, 0, 0.6);
 	opacity:0;
 }
-.container-one:before{
+.container-one:before,
+.container-three:before{
 	content: '';
 	display: inline-block;
 	vertical-align: middle;
@@ -438,7 +481,12 @@ input{
 	line-height: 29px;
 	cursor: pointer;
 }
-
+.button:hover{
+	-webkit-box-shadow:  0px 0px 15px #747776;
+	-moz-box-shadow: 	 0px 0px 15px #747776;
+	box-shadow: 		 0px 0px 15px #747776;
+	background-color: #f7e5e5;
+}
 
  /*Заглушка*/
 .coming-content{
@@ -462,7 +510,162 @@ input{
 	margin-top: 30px;
 }
 
+/*Подать заявку*/
+.container-invite{
+		width: 460px;
+		height: 350px;
+		background-color: #8ED8C1;
+		border:6px solid #2D896F;
+		border-radius: 15px;
+		position: relative;
+		display: inline-block;
+		vertical-align: middle;
+}
+.block-invite{
+	height: 100%;
+	background:   
+			url("../images/uzor7.png") no-repeat right top,
+			url("../images/uzor8.png") no-repeat left bottom;
 
+}
+.apply-cont{
+	width: 320px;
+	margin:0 auto;
+	text-align: center;
+}
+.event{
+	font-size:25px;
+	line-height: 20px;
+	margin-top: 10px;
+}
+.places{
+	font-size: 22px;
+}
+.input-info{
+	width: 250px;
+	height:20px;
+	border-radius: 10px;
+	padding: 2px;
+	border:none;
+	display: block;
+	margin: 0 auto;
+}
+.input-text{
+	font-size: 22px;
+	line-height: 25px;
 
+}
+.apply-form{
+	text-align: center;
+	margin: 0 auto;
+	margin-top: 5px;
+}
+.button-apply{
+	margin: 0 auto;
+	width: 130px;
+	height: 34px;
+	background-color: #e6bcaa;
+	border-radius: 10px;
+	border:1px solid #578476;
+	margin-top: 30px;
+	font-size: 23px;
+	line-height: 34px;
+	cursor: pointer;
+}
+.button-apply:hover{
+	-webkit-box-shadow:  0px 0px 15px #747776;
+	-moz-box-shadow: 	 0px 0px 15px #747776;
+	box-shadow: 		 0px 0px 15px #747776;
+	background-color: #fadcd0;
+}
+/*Отзывы*/
+.comment-cont{
+	width: 785px;
+	height: 419px;
+	margin: 0 auto;
+
+}
+.comment-place{
+	height: 400px;
+}
+.comment-one{
+	width: 790px;
+	height: 100px;
+}
+.comment-two{
+	width: 790px;
+	height: 100px;
+}
+.place_user{
+	width: 60px;
+	height: 100px;
+	text-align: center;
+	float:left;
+}
+
+.name_user{
+	font-size: 20px;
+	line-height: 20px;
+}
+.place_avatar{
+	width: 55px;
+	height: 50px;
+	background: url("../images/avaplace_color.png");
+	border:3px solid #6c8c5a;
+	border-radius: 10px;
+}
+.avatar{
+	width: 41px;
+	height: 45px;
+	background: url("../images/user_ava.png");
+	margin: 0 auto;
+	margin-top: 4px;
+}
+.place_comment{
+	width: 700px;
+	height: auto;
+	background: #e7f1da;
+	border:2px solid #69954b;
+	border-radius: 10px;
+	float:right;
+	padding-left: 5px;
+	line-height: 25px;
+}
+.comment_user{
+	font-size: 22px;
+	padding: 10px;
+}
+.place_button-invite{
+	width: 163px;
+	height: 41px;
+	background:#DBB99F;
+	border-radius: 10px;
+	margin: 0 auto;
+	-webkit-box-shadow:  0px 0px 15px #3a6149;
+	-moz-box-shadow: 	 0px 0px 15px #3a6149;
+	box-shadow: 		 0px 0px 15px #3a6149;
+	font-size: 22px;
+	text-align: center;
+	line-height: 41px;
+	cursor: pointer;
+}
+.place_button-invite:hover{
+	background:#F3BCA4;
+	font-size: 24px;
+	line-height: 39px;
+	-webkit-box-shadow:  0px 0px 15px #004010;
+	-moz-box-shadow: 	 0px 0px 15px #004010;
+	box-shadow: 		 0px 0px 15px #004010;
+}
+/*общие стили*/
+.name-places{
+	color:#000;
+}
+.seats_event{
+	color:#000;
+}
+a{
+	color:#8BDBA7;
+}
 
 

@@ -2,6 +2,7 @@ $(document).ready(function(){
 	var TIME = 500;
 	var one = $('.container-one');
 	var two = $('.container-two');
+	var three = $('.container-three');
 	var $home = $('.home');
 	var $page_block = $('.page_block');
 	var $page_cont = $('.page_cont');
@@ -84,4 +85,14 @@ $(document).ready(function(){
 		});
 	});
 
+	$('.invite-btn').click(function(){
+		three.removeClass('hide');
+		three.animate({opacity:1}, TIME);
+		
+	});
+	$('.close').click(function(){
+		three.animate({opacity:0}, TIME, function () {
+			three.addClass('hide');
+		});
+	});
 });
